@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: inadequate-gazelle-java-quarkus
+  janus-idp.io/tekton: inadequate-gazelle-java-quarkus
+  backstage.io/kubernetes-id: inadequate-gazelle-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: inadequate-gazelle-java-quarkus
+resources: 
+- deployment.yaml
+- route.yaml
+- service.yaml
